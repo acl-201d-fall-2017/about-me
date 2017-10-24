@@ -1,3 +1,5 @@
+"use strict";
+
 const username = prompt('What\'s your name');
 console.log('User said their name was: ' + username);
 alert('Hello ' + username + "!")
@@ -34,10 +36,10 @@ if(favFoodPotatoes === true){
     alert('Wrong. Potatoes are the best food ever!');
 }
 
-const grewUp = confirm(username + ' did I grow up in Alaska?'); // Grew up in Alaska?
-console.log('Question: Did I grow in in Alaska? User answered: ' + grewUp);
-if(grewUp === true){
-    alert('Correct! I did grow up in Alaska. Anchorage to be specific!');
+const grewUp = confirm(username + ' did I grow up in Oregon?'); // Grew up in Oregon?
+console.log('Question: Did I grow in in Oregon? User answered: ' + grewUp);
+if(grewUp === false){
+    alert('Correct! I actually grew up in Alaska!');
 }else{
     alert('Wrong. How could you have known that tho?');
 }
