@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 const username = prompt('What\'s your name?');
 console.log('User said their name was: ' + username);
@@ -42,14 +42,26 @@ console.log('Question: Did I grow in in Oregon? User answered: ' + grewUp);
 if(likesGuardians.toLowerCase() === 'no' || likesGuardians.toLowerCase() === 'n'){
     alert('Correct! I actually grew up in Alaska!');
 }else{
-    alert('Wrong. How could you have known that tho?');
+    alert('Wrong. How could you have known that tho? I actually grew up in Alaska!');
 }
 
-//if(likesGuardians.toLowerCase() === 'yes' || likesGuardians.toLowerCase() === 'y'){
-//    alert
-//  }else()
-//
-//  tell them do no use punctuation in first alert
+alert(username + ' we are going to play a guessing game. I will think of a number between 1 and 10, and you have 4 tries to guess it!'); // Alert before guessing game starts, explaining to them the rules.
+
+
+for(let i = 1; i < 5; i++){
+    const guess = prompt(username + ' guess a number between 1 and 10.');
+    if(guess === 6){
+        alert('Correct. The answer was 6!');
+    }else{
+        alert('Wrong. Keep guessing! You have used ' + i + ' of 4 of your guesses.');
+    }
+}
+
+
+
+
+
+
 //  create a new variable to erase all the toLowerCase like: const guardiansAns = likesGuardians.toLowercase(); then use guardiansAns instead of likesGuardians.toLowercase()
 //
-//  or just add .toLowerCase(); at the end of the initial cont
+//  or just add .toLowerCase(); at the end of the initial cont?
