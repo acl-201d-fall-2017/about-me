@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
 const username = prompt('What\'s your name');
 console.log('User said their name was: ' + username);
-alert('Hello ' + username + "!")
+alert('Hello ' + username + '!');
 
 const likesPizza = confirm(username + ' do I like pizza?'); // Likes pizza?
 console.log('Question: likes pizza? User answered: ' + likesPizza);
@@ -44,3 +44,11 @@ if(grewUp === false){
     alert('Wrong. How could you have known that tho?');
 }
 
+//if(likesGuardians.toLowerCase() === 'yes' || likesGuardians.toLowerCase() === 'y'){
+//    alert
+//  }else()
+//
+//  tell them do no use punctuation in first alert
+//  create a new variable to erase all the toLowerCase like: const guardiansAns = likesGuardians.toLowercase(); then use guardiansAns instead of likesGuardians.toLowercase()
+//
+//  or just add .toLowerCase(); at the end of the initial cont
