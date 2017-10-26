@@ -1,9 +1,11 @@
-'use strict';
+// 'use strict';
 
 const username = prompt('What\'s your name?');
 console.log('User said their name was: ' + username);
 alert('Hello ' + username + '!');
+
 let score = 0;
+
 alert(username + ' I am going to ask you a series of yes or no questions. Type yes, no, y or n in the field with no punctuation to submit your answer. Upper or lower case should not matter.');
 // do I like pizza?
 const likesPizza = prompt(username + ' do I like pizza?'); // Likes pizza?
@@ -14,6 +16,7 @@ if(likesPizza.toLowerCase() === 'yes' || likesPizza.toLowerCase() === 'y'){
 } else{
     alert('Wrong... who doesn\'t like pizza..?');
 }
+
 // guess if I liked guardians of the galaxy
 const likesGuardians = prompt(username + ' did I enjoy watching Guardians of the Galaxy?'); // Likes Guardians of the Galaxy?
 console.log('Question: Liked Guardians of the Galaxy? User answered: ' + likesGuardians);
@@ -23,6 +26,7 @@ if(likesGuardians.toLowerCase() === 'yes' || likesGuardians.toLowerCase() === 'y
 }else{
     alert('Wrong. How could you NOT like that movie?');
 }
+
 //guess if I liked guardians 2
 const likesGuardiansSequel = prompt(username + ' what about the sequel Guardians 2? Did I like that movie?');
 console.log('Question: Did I like the sequel of Guardians of the Galaxy? User answered: ' + likesGuardiansSequel);
@@ -32,6 +36,7 @@ if(likesGuardiansSequel.toLowerCase() === 'yes' || likesGuardiansSequel.toLowerC
 }else{
     alert('Wrong. Of course I liked the sequel! Best sequel in years imho...');
 }
+
 // guess if my favorite food is potatoes
 const favFoodPotatoes = prompt(username + ' would you believe me if I told you potatoes were my favorite food?');
 console.log('Question: Are potatoes my favorite food? User answered: ' + favFoodPotatoes);
@@ -41,6 +46,7 @@ if(favFoodPotatoes.toLowerCase() === 'yes' || favFoodPotatoes.toLowerCase() === 
 }else{
     alert('Wrong. Potatoes are the best food ever!');
 }
+
 // guess where I grew up
 const grewUp = prompt(username + ' did I grow up in Oregon?');
 console.log('Question: Did I grow in in Oregon? User answered: ' + grewUp);
@@ -50,21 +56,41 @@ if(grewUp.toLowerCase() === 'no' || grewUp.toLowerCase() === 'n'){
 }else{
     alert('Wrong. How could you have known that tho? I actually grew up in Alaska!');
 }
+
+
 // guessing game, guess a number between 1-10
 alert(username + ' we are going to play a guessing game. I will think of a number between 1 and 10, and you have 4 tries to guess it!'); // Alert before guessing game starts, explaining to them the rules.
-for(let i = 1; i < 5; i++){
-    const guess = prompt(username + ' guess a number between 1 and 10.');
+
+let x = 0;
+x = x + 1;
+x += 1;
+x++;
+
+console.log(x);
+
+
+const monkeys = ['james','joe','jerry'];
+
+for (let index = 0; index < 3; index++) {
+    console.log( monkeys[index] );
+}
+
+for(let guesses = 1; guesses < 5; guesses++){
+    const guess = parseInt( prompt(username + ' guess a number between 1 and 10.') );
+    console.log( 'typeof guess: ' + typeof guess);
+    console.log( 'typeof parseInt(guess): ' + typeof parseInt(guess) );
     console.log('Question: Guess a number between 1 and 10? User answered: ' + guess);
-    if(guess === '6'){
+    if(guess === 6){
         alert('Correct. The answer was 6!');
         score++;
         break;
     }else if (guess <= 5) {
-        alert('Wrong. Too low! Keep guessing! You have used ' + i + ' of 4 of your guesses.');
+        alert('Wrong. Too low! Keep guessing! You have used ' + guesses + ' of 4 of your guesses.');
     }else if(guess >= 7) {
-        alert('Wrong. Too high! Keep guessing! You have used ' + i + ' of 4 of your guesses.');
+        alert('Wrong. Too high! Keep guessing! You have used ' + guesses + ' of 4 of your guesses.');
     }
 }
+
 // guessing game, guess what state/states I've lived in
 for(let i = 1; i < 7; i++){
     const lived = ['alaska', 'washington', 'oregon'];
